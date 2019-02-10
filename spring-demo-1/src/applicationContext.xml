@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- Define your beans here -->
+	
+	<!-- Add a logger config to see logging messages. 
+	- For more detailed logs, set values to "FINEST" 
+	- For info on logging levels, 
+	see: http://www.vogella.com/tutorials/Logging/article.html -->
+	
+	<bean 
+		id="myLoggerConfig" 
+		class="com.mmk.cfg.MyLoggerConfig" 
+		init-method="initLogger">
+		
+		<property name="rootLoggerLevel" value="FINE" />
+		<property name="printedLoggerLevel" value="FINE" />
+		</bean>
+
+
+	<bean id="fortuneService" class="com.mmk.services.HappyFortuneService"> </bean>
+
+	<!-- <bean id="myCoach" class="com.mmks.TrackCoach"> </bean> -->
+	
+	<!-- <bean id="myCoach" class="com.mmk.coach.TrackCoach">
+		<constructor-arg ref="fortuneService"/>
+	</bean> -->
+	
+	<bean id="myCoach" class="com.mmk.coach.CricketCoach">
+		<property name="fortuneService" ref="fortuneService"></property>
+		<property name="emailAddress" value="${cric.email}"></property>
+		<property name="team" value="${cric.team}"></property>
+	</bean>
+	
+	<!--  Property file config -->
+	<context:property-placeholder location="classpath:sport.properties"/>
+
+</beans>
