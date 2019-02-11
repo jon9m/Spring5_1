@@ -3,14 +3,13 @@ package com.mmk;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component("thatSillyCoach")
-public class TennisCoach implements Coach {
+@Component("sillySetterCoach")
+public class TennisCoachSetterInjection implements Coach {
 
 	private FortuneService coachFortuneService;
 	
 	@Autowired
-	public TennisCoach(FortuneService coachFortuneService) {
-		super();
+	public void setCoachFortuneService(FortuneService coachFortuneService) {
 		this.coachFortuneService = coachFortuneService;
 	}
 

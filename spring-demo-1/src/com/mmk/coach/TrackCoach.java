@@ -15,7 +15,7 @@ public class TrackCoach implements Coach {
 		return "Run a hard 5k, " + this.fortuneService.getFortune();
 	}
 	
-	public void coachInitMethod() {		
+	public void coachInitMethod() {
 		System.out.println("---------- Inside coach init mehtod ----------");
 	}
 	
