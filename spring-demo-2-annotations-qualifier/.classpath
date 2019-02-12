@@ -69,5 +69,6 @@
 	<classpathentry kind="lib" path="/spring-demo-1/lib/spring-websocket-5.1.4.RELEASE-javadoc.jar"/>
 	<classpathentry kind="lib" path="/spring-demo-1/lib/spring-websocket-5.1.4.RELEASE-sources.jar"/>
 	<classpathentry kind="lib" path="/spring-demo-1/lib/spring-websocket-5.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/spring-demo-1/lib/javax.annotation-api-1.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
