@@ -16,5 +16,11 @@
 		<input type="text" name="name2" placeHolder="Enter your name">
 		<input type="submit" value="Submit Form">
 	</form>
+	<br>
+	<div>processFormVersion3</div>
+	<form action="processFormVersion3" method="get">
+		<input type="text" name="name3" placeHolder="Enter your name">
+		<input type="submit" value="Submit Form">
+	</form>
 </body>
 </html>
