@@ -1,11 +1,15 @@
 package com.mmk.hibernate.entity;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @Table(name = "student")
@@ -25,13 +29,18 @@ public class Student {
 	@Column(name = "email")
 	private String email;
 
+	@Column(name = "dob")
+	@Temporal(TemporalType.DATE)
+	private Date dob;
+
 	public Student() {
 	}
 
-	public Student(String firstName, String lastName, String email) {
+	public Student(String firstName, String lastName, String email, Date dob) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
+		this.dob = dob;
 	}
 
 	@Override

@@ -16,7 +16,7 @@ public class UpdateStudentDemo {
 		Session session = sessionFactory.getCurrentSession();
 		try {
 			// Retrieve the student
-			int id = 1;
+			int id = 104;
 			String firstName = "sam";
 			
 			session = sessionFactory.getCurrentSession();

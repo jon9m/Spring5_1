@@ -16,15 +16,15 @@ public class DeleteStudentDemo {
 		Session session = sessionFactory.getCurrentSession();
 		try {
 			// Retrieve the student
-			int id = 5;
+			int id = 105;
 
 			session = sessionFactory.getCurrentSession();
 			Transaction tx2 = session.beginTransaction();
 
-//			Student stu = session.get(Student.class, id);
-//			session.delete(stu);
+			Student stu = session.get(Student.class, id);
+			session.delete(stu);
 			
-			session.createQuery("delete from Student").executeUpdate();   
+//			session.createQuery("delete from Student").executeUpdate();   
 
 			tx2.commit();
 		} finally {

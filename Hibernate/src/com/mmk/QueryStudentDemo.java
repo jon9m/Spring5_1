@@ -23,7 +23,7 @@ public class QueryStudentDemo {
 //			List<Student> students = session.createQuery("from Student where id > 3").getResultList();
 //			List<Student> students = session.createQuery("from Student s where  s.firstName='student1'").getResultList();
 //			List<Student> students = session.createQuery("from Student s where  s.firstName='student1' OR s.firstName='malaka'").getResultList();
-			List<Student> students = session.createQuery("from Student s where  s.firstName like '%dent1'").getResultList();
+			List<Student> students = session.createQuery("from Student s where  s.lastName like '%ras1'").getResultList();
 			System.out.println(students);
 
 //			List<Object[]> students = session.createQuery("select firstName, id from Student").getResultList();

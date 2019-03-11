@@ -8,3 +8,7 @@ CREATE TABLE `student` (
 
 --Changing the starting index
 ALTER TABLE hb_student_tracker.student AUTO_INCREMENT=100
+
+
+    ALTER TABLE `hb_student_tracker`.`student` 
+    ADD COLUMN `dob` DATETIME NULL AFTER `last_name`;
