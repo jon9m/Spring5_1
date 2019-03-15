@@ -20,8 +20,8 @@ public class CustomerDAOImpl implements CustomerDAO {
 	private SessionFactory sessionFactory;
 
 	@Override
-//	@Transactional(value=TxType.MANDATORY)
-	@Transactional
+//	@Transactional(value=TxType.MANDATORY)						- move to Service layer
+//	@Transactional 												- move to Service layer
 	public List<Customer> getCustomers() {
 
 		// Get current hibernate session
