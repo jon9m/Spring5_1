@@ -1,14 +1,14 @@
 html, body{
-	margin-left:15px; margin-right:15px; 
 	padding:0px; 
-	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-family:Verdana, Arial, Helvetica, sans-serif;	
 }
 
 table {   
 	border-collapse:collapse;
 	border-bottom:1px solid gray;
 	font-family: Tahoma,Verdana,Segoe,sans-serif;
-	width:72%;
+	width:100%;
+	border-radius: 10px;
 }
  
 th {
@@ -22,12 +22,16 @@ tr {
 	border-top:1px solid gray;
 	text-align:center;	
 }
+
+td { 
+	padding: 2px;	
+}
  
-tr:nth-child(even) {background: #FFFFFF}
-tr:nth-child(odd) {background: #BBBBBB}	
+tr:nth-child(even) {background: #EFE7E7}
+tr:nth-child(odd) {background: #EFE7E7}	
  
 #wrapper {width: 100%; margin-top: 0px; }
-#header {width: 70%; background: #09c332; margin-top: 0px; padding:15px 0px 15px 15px;}
+#header {background: #9e9e9e; margin-top: 0px; padding:15px 0px 15px 15px;}
 #header h2 {width: 100%; margin:auto; color: #FFFFFF;}
 #container {width: 100%; margin:auto}
 #container h3 {color: #000;}
@@ -44,4 +48,10 @@ tr:nth-child(odd) {background: #BBBBBB}
 	
 	margin-bottom: 15px;
 	background: #cccccc;
+}
+
+.outerdiv {
+	margin:auto; 
+	width:70%;
+	border-radius: 10px;
 }
